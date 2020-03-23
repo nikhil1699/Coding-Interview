@@ -1,0 +1,110 @@
+
+<html>
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+    function display()
+    {
+       form=document.getElementById("form1");
+       total=0;
+       var msg="";
+       //check if the checkBox is checked or not.
+       if(form.Checkbox1.checked==true)
+       {
+          msg=msg +"Veg Pizza \t- Rs." + form.Checkbox1.value +"\n"; // add the  dish name and its price to the msg.
+          total=total+parseInt(form.Checkbox1.value); // calculate the total.
+       }
+       if(form.Checkbox2.checked==true)
+       {
+          msg= msg + "NonVeg Pizza \t- Rs." + form.Checkbox2.value + " \n";
+          total=total+parseInt(form.Checkbox2.value);
+       }
+       if(form.Checkbox3.checked==true)
+       {
+          msg=msg +"Veg Burger \t- Rs." + form.Checkbox3.value +" \n";
+          total=total+parseInt(form.Checkbox3.value);
+       }
+       if(form.Checkbox4.checked==true)
+       {
+          msg=msg + "Chicken Burger \t- Rs." + form.Checkbox4.value + " \n";
+          total=total+parseInt(form.Checkbox4.value);
+       }
+       if(form.Checkbox5.checked==true)
+       {
+          msg=msg + "Gobi Manchuri \t- Rs." + form.Checkbox5.value + "\n";
+          total=total+parseInt(form.Checkbox5.value);
+       }
+       if(form.Checkbox6.checked==true)
+       {
+          msg=msg+ "Mashroom Manchuri \t- Rs." + form.Checkbox6.value + "\n";
+          total=total+parseInt(form.Checkbox6.value);
+       }
+       if(form.Checkbox7.checked==true)
+       {
+          msg=msg+ "Baby corn Manchuri \t- Rs." + form.Checkbox7.value + "\n";
+          total=total+parseInt(form.Checkbox7.value);
+       }
+       if(form.Checkbox8.checked==true)
+       {
+          msg=msg+ "Tamoto Soup \t\t- Rs." + form.Checkbox8.value + "\n";
+          total=total+parseInt(form.Checkbox8.value);
+       }
+       if(form.Checkbox9.checked==true)
+       {
+          msg=msg+ "Masala Papad \t\t- Rs." + form.Checkbox9.value + "\n";
+          total=total+parseInt(form.Checkbox9.value);
+       }
+       if(form.Radio1.checked==true)
+       {
+          msg=msg+ "Coke \t\t- Rs." + form.Radio1.value + "\n";
+          total=total+parseInt(form.Radio1.value);
+       }
+       if(form.Radio2.checked==true)
+       {
+          msg=msg+ "Pepsi \t\t- Rs." + form.Radio2.value + "\n";
+          total=total+parseInt(form.Radio2.value);
+       }
+       if(form.Radio3.checked==true)
+       {
+          msg=msg+ "Sprite \t\t- Rs." + form.Radio3.value + "\n";
+          total=total+parseInt(form.Radio3.value);
+       }
+       if(form.Radio4.checked==true)
+       {
+          msg=msg+ "Thums up \t\t- Rs." + form.Radio4.value + "\n";
+          total=total+parseInt(form.Radio4.value);
+       }
+   
+       form.txtarea.value=msg + "\n \t Total :\t"+ total; // display the msg and the total to the textArea.
+     }
+     </script>
+</head>
+<body>
+<form id=form1>
+
+  <h4> Dishes</h4><br />
+  <input id="Checkbox1" type="checkbox" name="grp1" value="120"/> Veg Pizza<br />
+  <input id="Checkbox2" type="checkbox" name="grp1" value="250"/> NonVeg Pizza<br />
+  <input id="Checkbox3" type="checkbox" name="grp1" value="40"/> Veg Burger<br />
+  <input id="Checkbox4" type="checkbox" name="grp1" value="60"/> Chicken Burger<br />
+   
+  <h4> Stater </h4><br />
+  <input id="Checkbox5" type="checkbox" name="grp2" value="60"/> Gobi Manchuri <br />
+  <input id="Checkbox6" type="checkbox" name="grp2" value="75"/> Mashroom Manchuri<br />
+  <input id="Checkbox7" type="checkbox" name="grp2" value="75"/> Baby corn Manchuri<br />
+  <input id="Checkbox8" type="checkbox" name="grp2" value="55"/> Tamoto Soup<br />
+  <input id="Checkbox9" type="checkbox" name="grp2" value="35"/> Masala Papad<br />
+   
+  <h4> Soft drinks </h4><br />
+  <input id="Radio1" type="radio" name="grp3" value="15"/> Coke<br />
+  <input id="Radio2" type="radio" name="grp3" value="15"/> Pepsi<br />
+  <input id="Radio3" type="radio" name="grp3" value="15"/> Sprite<br />
+  <input id="Radio4" type="radio" name="grp3" value="15"/> Thumsup<br /><br />
+   
+  <input id="btn1" type="button" value="Submit" onclick="display()" /><br /><br />
+   
+  <textarea id="txtarea" cols="40" rows="10"></textarea><br /><br />
+
+</form>
+</body>
+</html>
