@@ -89,6 +89,59 @@ BinaryTreeNode<int>* takeInputNormally(){
     
 }
 
+int countNode(BinaryTreeNode<int>* root){
+    if(root==NULL){
+        return 0;
+    }
+    return 1+countNode(root->Left)+countNode(root->Right);
+}
+bool isPresent(BinaryTreeNode<int>*root, int x){
+    if(root==NULL){
+        return false;
+    }
+    if(root->data==x){
+        return true;
+    }
+    bool leftSearch=isPresent(root->Left,x);
+    bool rightSearch=isPresent(root->Right,x);
+    return leftSearch || rightSearch;
+}
+int heightOfTree(BinaryTreeNode<int>*root){
+    if(root==NULL){
+        return 0;
+    }
+    int temp1= heightOfTree(root->Left);
+    int temp2= heightOfTree(root->Right);
+    int ans=0;
+    if(temp1>temp2){
+        ans=temp1;
+    }
+    else{ans=temp2;}
+    return ans+1;
+
+}
+
+void mirror_a_BinaryTree(BinaryTreeNode<int>* root){
+    if(root==NULL){
+        return;
+    }
+    mirror_a_BinaryTree(root->Left);
+    mirror_a_BinaryTree(root->Right);
+    BinaryTreeNode<int>* temp=NULL;
+    temp=root->Left;
+    root->Left=root->Right;
+    root->Right=temp;
+}
+
+void inorder(BinaryTreeNode<int>* root){
+    if(root==NULL){
+        return;
+    }coding ninjas
+    inorder(root->Left);
+    cout<<root->data<<" ";
+    inorder(root->Right);
+    
+}
 int main(){
     // BinaryTreeNode<int>* root = new BinaryTreeNode<int>(1);
     // BinaryTreeNode<int>* node1 = new BinaryTreeNode<int>(2);
@@ -103,6 +156,8 @@ int main(){
 
     BinaryTreeNode<int>* root=takeInputLevelwise();
     printTree(root);
+    cout<<endl;
+    cout<<countNode(root);
     delete root;
     
 }
