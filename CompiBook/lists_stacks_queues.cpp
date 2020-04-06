@@ -183,16 +183,22 @@ q.push(3);
 q.push(5);
 q.push(7);
 q.push(2);
+bool ans=q.empty();
+cout<<q.size();
 cout << q.top() << "\n"; // 7
-q.pop();
+q.pop();//Removes topmost element or maximum element
+cout<<q.top(); // Returns top element
 cout << q.top() << "\n"; // 5
 q.pop();
 q.push(6);
-cout << q.top() << "\n"; // 6
+cout << q.topint n = sizeof(src) / sizeof(src[0]);
+
+	std::vector<int> dest(src, src + n);
+() << "\n"; // 6
 q.pop();
 
 // If we want to create a priority queue that supports finding and removing the
-// smallest element, we can do it as follows:
+// smallest element, we can do it as follows:ie, min priority queue
 priority_queue<int,vector<int>,greater<int>> q;
 
 
@@ -200,4 +206,5 @@ priority_queue<int,vector<int>,greater<int>> q;
 
 
 	return 0;
+
 }
