@@ -1,4 +1,4 @@
-// Ivan Carvalho
+
 // Problem M - Educational Dynamic Programming Contest - AtCoder
 // Link : https://atcoder.jp/contests/dp
 #include <bits/stdc++.h>

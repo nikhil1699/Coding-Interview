@@ -1,4 +1,4 @@
-// Ivan Carvalho
+
 // Problem W - Educational Dynamic Programming Contest - AtCoder
 #include <bits/stdc++.h>
 using namespace std;
