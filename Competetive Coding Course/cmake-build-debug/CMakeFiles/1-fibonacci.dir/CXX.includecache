@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nikhil/Desktop/Coding-Interview/Competetive Coding Course/Dynamic Programming/1-fibonacci.cpp
+bits/stdc++.h
+-
+

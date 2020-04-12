@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c23845e1c1c2a414b4d8d5fe767832b8076951b0
 // Problem A - Educational Dynamic Programming Contest - AtCoder
 // Link : https://atcoder.jp/contests/dp
 #include <bits/stdc++.h>
