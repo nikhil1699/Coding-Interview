@@ -17,7 +17,7 @@ int minCostPathHelper(int** input, int m, int n, int i, int j, int** output){
     else if(i==m-1 && j==n-1){
         return input[i][j];
     }
-    else{
+    else{CLASSROOM
         //Check if ans already exists
         if(output[i][j] != -1){
             return output[i][j];

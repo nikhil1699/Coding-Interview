@@ -8,7 +8,7 @@ long staircase(int n){
     arr[0] = 1;
     arr[1] = 1;
     arr[2] = 2;
-    for (long  i = 3; i < n+1; i++)
+    for (long  i = 3; i <=n; i++)
     {
         long x=arr[i-1];
         long y=arr[i-2];
